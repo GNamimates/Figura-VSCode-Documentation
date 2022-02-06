@@ -1,7 +1,6 @@
 --================================================================================================--
 --=====  CLASSES  ================================================================================--
 --================================================================================================--
-
 ---A Minecraft biome identifier.
 ---
 ---Only the default Minecraft biomes are auto-completed.  
@@ -1456,6 +1455,7 @@
 ---@class BlockState
 ---@field name BlockID
 ---@field properties BlockStateProperties
+local BlockState = {}
 
 ---A 4-bit int.
 ---@alias NibbleInt "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"10"|"11"|"12"|"13"|"14"|"15"
@@ -1576,3 +1576,60 @@ function World.isLightning() end
 ---The world that this script is running in currently.
 ---@type World
 world = {}
+
+---Returns true if a world is present.
+---@return boolean
+function world.hasWorld() end
+
+---returns a table of all the Figura players who allows tracking.
+---@return table
+function world.getFiguraPlayers() end
+
+--- to set the position of the block.
+function BlockState.setPos(pos) end
+
+---Returns a table with all block tags this blockstate have eg: #minecraft:flowers.
+function BlockState.getBlockTags() end
+
+--- Returns the map color of the block
+---@return VectorColor
+function BlockState.getMapColor() end
+
+--- Returns true if the block is solid
+---@return boolean
+function BlockState.isSolidBlock() end
+
+--- Returns true if the block occupes an entire 16³ cube.
+---@return boolean
+function BlockState.isFullCube() end
+
+---Returns if the block is a block entity.
+---@return boolean
+function BlockState.hasBlockEntity() end
+
+---Returns true if the block is Opaque
+---@return boolean
+function BlockState.isOpaque() end
+
+---@return boolean
+function BlockState.hasEmissiveLighting() end
+
+---@return boolean
+function BlockState.isTranslucent() end
+
+---@return boolean
+function BlockState.emitsRedstonePower() end
+
+---@return number
+function BlockState.getOpacity() end
+
+---Returns the light level.
+---@return integer
+function BlockState.getLuminance() end
+
+---Returns how strong the block is.
+---@return number
+function BlockState.getHardness() end
+
+---Returns the amount of restone power a comparitor would output.
+function BlockState.getComparatorOutput() end

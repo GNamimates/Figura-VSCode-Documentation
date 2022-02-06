@@ -328,3 +328,16 @@ function vectors.rgbToINT(vec) end
 ---@param vec VectorPos
 ---@return VectorPos
 function vectors.worldToPart(vec) end
+
+--- Converts Degrees to Radians
+---@return VectorPos
+function vectors.toRad() end
+
+--- Converts Radians to Degrees
+---@return VectorPos
+function vectors.toDeg() end
+
+--- Converts world position to screen space positions
+---@param VectorPos VectorPos
+---@return VectorPos
+function worldToScreenSpace(VectorPos) end
