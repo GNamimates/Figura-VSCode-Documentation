@@ -118,3 +118,43 @@ function action_wheel.setLeftSize(size) end
 ---Sets the amount of slots on the right side of the action wheel.
 ---@param size SlotSideNumber
 function action_wheel.setRightSize(size) end
+
+
+---set the action wheel custom texture
+---***
+--- "None"  nothing, uses an item instead   
+--- "Custom" → uses your custom/model texture  
+--- "Skin" → uses the player vanilla skin  
+--- "Cape" → uses the player cape   
+--- "Elytra" → uses the player elytra  
+--- "Resource" → uses an ingame/resource pack texture  
+---@param type string
+function ActionWheelSlot.setTexture(type) end
+
+---Sets the UV for the Custom texture.
+---***
+--- **uvOffset** → first corner of the UV.  
+--- **uvSize** → other corner of the UV.  
+--- **textureSize** → the size of the Texture.  
+---@param uvOffset Vector2
+---@param uvSize Vector2
+---@param textureSize Vector2
+function ActionWheelSlot.setUV(uvOffset,uvSize,textureSize) end
+
+---Returns the texture type of the slot.
+---***
+--- "None"  nothing, uses an item instead   
+--- "Custom" → uses your custom/model texture  
+--- "Skin" → uses the player vanilla skin  
+--- "Cape" → uses the player cape   
+--- "Elytra" → uses the player elytra  
+--- "Resource" → uses an ingame/resource pack texture  
+---@return Vector2
+function ActionWheelSlot.getTexture() end
+
+---Returns the UV for the Custom texture.
+function ActionWheelSlot.getUV() end
+
+---Returns the texture Scale
+---@return Vector2
+function ActionWheelSlot.getTextureScale() end

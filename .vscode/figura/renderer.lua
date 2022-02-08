@@ -20,3 +20,17 @@ function renderer.isFirstPerson() end
 ---Set the radius to `nil` to reset the shadow.
 ---@param radius number|nil
 function renderer.setShadowSize(radius) end
+
+---custom shader uniform controllers
+---@param stringLayer string
+---@param stringUniform string
+---@param tableValue integer
+function renderer.setUniform(stringLayer, stringUniform, tableValue) end
+
+--- returns true if the camera is backwards
+---@return boolean
+function renderer.isCameraBackwards() end
+
+---Returns the VIEWER's camera pos
+---@return VectorPos
+function renderer.getCameraPos() end

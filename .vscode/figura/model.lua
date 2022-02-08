@@ -183,6 +183,18 @@ function CustomModelPart.getShader() end
 ---@return VectorUV
 function CustomModelPart.getUV() end
 
+---Returns true culling is enabled on the custom part.
+---@return boolean
+function CustomModelPart.getCullEnabled(bool) end
+
+---Returns a string, either "CUBE", "GROUP" or "MESH", of the part type.
+---@return string
+function CustomModelPart.getType() end
+
+---returns a string, of the part name (the name as in blockbench for this cube/bone)
+---@return string
+function CustomModelPart.getName() end
+
 ---Takes a `Vector` with a direction relative to the part and returns a `Vector` with the direction
 ---in world-space.
 ---@param dir VectorPos
@@ -246,6 +258,10 @@ function CustomModelPart.setShader(shader) end
 ---Note: This does *not* set the actual UV of the part.
 ---@param uv VectorUV
 function CustomModelPart.setUV(uv) end
+
+---Toggles culling on the custom part.
+---@param bool boolean
+function CustomModelPart.setCullEnabled(bool) end
 
 ---Takes a `Vector` with a direction in world-space and
 ---returns a `Vector` with the direction relative to the part.

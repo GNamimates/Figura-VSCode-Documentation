@@ -340,4 +340,14 @@ function vectors.toDeg() end
 --- Converts world position to screen space positions
 ---@param VectorPos VectorPos
 ---@return VectorPos
-function worldToScreenSpace(VectorPos) end
+function vectors.worldToScreenSpace(VectorPos) end
+
+---Converts a XYZ vector into a quaternion.
+---@param vector any
+---@return VectorPos
+function vectors.toQuaternion(vector) end
+
+---Converts a quaternion into a XYZ vector.
+---@param vector VectorPos
+---@return VectorPos
+function vectors.fromQuaternion(vector) end
