@@ -387,3 +387,20 @@ parrot_model = {
   ---@type BasicModelPart
   RIGHT_PARROT = {}
 }
+
+---Scales the part.
+---@param scale VectorPos
+function VanillaModelPart.setScale(scale) end
+
+---Scales the part.
+---@param scale VectorPos
+function BasicModelPart.setScale(scale) end
+
+--- Textures:  
+--- **Custom** = your custom texture, if any (default)  
+--- **Skin** = your vanilla minecraft skin  
+--- **Cape** = your cape, or Steve if you dont have a cape  
+--- **Elytra** = your elytra texture (NOT the cape-provided elytra!) (vanilla probably dont even use it at all)  
+--- **Resource** = any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!)  
+---@param type string
+function CustomModelPart.setTexture(type) end

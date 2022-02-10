@@ -370,6 +370,20 @@ function LivingEntity.getStatusEffect(effect) end
 ---@return StatusEffectID[]
 function LivingEntity.getStatusEffectTypes() end
 
+---Returns true if the entity is using an item.
+---@return boolean
+function LivingEntity.isUsingItem() end
+
+--- get the player active hand.  
+--- outputs are: `nil`, `"MAIN_HAND"`, `"OFF_HAND"`  
+--- only updates after using an item,  
+--- if no item was ever used, it returns nil.  
+---@return string | nil
+function LivingEntity.getActiveHand() end
+
+---Returns an item stack table of the active item.
+---@return table
+function LivingEntity.getActiveItem() end
 
 ---Player ⇐ LivingEntity ⇐ Entity
 ---***
@@ -403,6 +417,9 @@ function Player.lastDamageSource() end
 ---@return number
 function Player.getExperienceLevel() end
 
+---Gets the stored value from the player.
+---@param key string
+function player.getStoredValue(key) end
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--
