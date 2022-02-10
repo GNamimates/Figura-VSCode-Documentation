@@ -119,6 +119,10 @@ function action_wheel.setLeftSize(size) end
 ---@param size SlotSideNumber
 function action_wheel.setRightSize(size) end
 
+---Returns true if the action wheel is open.  
+---note: this will return nil if the avatar is a remote view.  
+---@return boolean
+function action_wheel.isOpen() end
 
 ---set the action wheel custom texture
 ---***
