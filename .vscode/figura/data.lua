@@ -1,5 +1,9 @@
-
+--- This API allows you to save/read persistent key / values pairs in a file, allowing you to keep variables after rejoining worlds or changing avatars  
+--- it uses the avatar name as file name ("main" for the online avatar)  
+--- it can save every type of value, except functions  
+--- only works for local player! so you might want to use pings for sync  
 data = {}
+
 
 ---Sets the target File name.
 ---@param name string
