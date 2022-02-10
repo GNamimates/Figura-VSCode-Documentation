@@ -132,3 +132,9 @@ function player_init() end
 ---different scripts easier.
 ---@param cmd string
 function onCommand(cmd) end
+
+
+---Share variables between scripts.
+---@param key string
+---@param value any
+function storeValue(key,value) end
