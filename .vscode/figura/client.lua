@@ -93,17 +93,17 @@ function client.isHost() end
 
 ---Toggles the crosshair.
 ---@param toggle boolean
-function setCrosshairEnabled(toggle) end
+function client.setCrosshairEnabled(toggle) end
 
 ---Returns true if the crosshair is enabled.
 ---@return boolean
-function getCrosshairEnabled() end
+function client.getCrosshairEnabled() end
 
 ---Offsets the chrosshair.
 ---@param pos Vector2
-function setCrosshairPos(pos) end
+function client.setCrosshairPos(pos) end
 
 ---Returns the crosshair offset.
 ---@return Vector2
-function setCrosshairPos() end
+function client.setCrosshairPos() end
 
