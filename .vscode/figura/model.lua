@@ -404,3 +404,7 @@ function BasicModelPart.setScale(scale) end
 --- **Resource** = any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!)  
 ---@param type string
 function CustomModelPart.setTexture(type) end
+
+---Sets the render layer
+---@param name string
+function BasicModelPart.setRenderLayer(name) end
