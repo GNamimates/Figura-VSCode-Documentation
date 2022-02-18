@@ -1633,3 +1633,26 @@ function BlockState.getHardness() end
 
 ---Returns the amount of restone power a comparitor would output.
 function BlockState.getComparatorOutput() end
+
+---Returns true if the block has collision.
+function BlockState.isCollidable() end
+
+function BlockState.getMaterial() end
+
+---Returns a table, listing each sound a blockstate may make, also includes base pitch and volume.
+function BlockState.toStateString() end
+
+---Returns a table, listing each sound a blockstate may make, also includes base pitch and volume.
+function BlockState.getSoundGroup() end
+
+---Returns a table of vectors, each vector corrisponding to a "box" of the visual hitbox (format: minX, minY, minZ, maxX, maxY, maxZ).
+function BlockState.getOutlineShape() end
+
+---Returns a table of vectors, each vector corrisponding to a "box" of the block's collision (format: minX, minY, minZ, maxX, maxY, maxZ).
+function BlockState.getCollisionShape() end
+
+function BlockState.getBlastResistance() end
+
+function BlockState.getSlipperiness() end
+
+function BlockState.getVelocityMultiplier() end
