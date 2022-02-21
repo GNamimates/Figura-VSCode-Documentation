@@ -331,11 +331,11 @@ function vectors.worldToPart(vec) end
 
 --- Converts Degrees to Radians
 ---@return VectorPos
-function vectors.toRad() end
+function Vector.toRad() end
 
 --- Converts Radians to Degrees
 ---@return VectorPos
-function vectors.toDeg() end
+function Vector.toDeg() end
 
 --- Converts world position to screen space positions
 ---@param VectorPos VectorPos
@@ -350,4 +350,8 @@ function vectors.toQuaternion(vector) end
 ---Converts a quaternion into a XYZ vector.
 ---@param vector VectorPos
 ---@return VectorPos
+function vectors.fromQuaternion(vector) end
+
+---Convert a quaternion into a XYZ vector.
+---@param vector VectorPos
 function vectors.fromQuaternion(vector) end
