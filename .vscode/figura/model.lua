@@ -396,11 +396,21 @@ function VanillaModelPart.setScale(scale) end
 ---@param scale VectorPos
 function BasicModelPart.setScale(scale) end
 
+---@class texture
+---@alias texture
+---| '"Custom"'
+---| '"Skin"'
+---| '"Cape"'
+---| '"Elytra"'
+---| '"Resource"'
+texture = {}
+
+
 --- Textures:  
 --- **Custom** = your custom texture, if any (default)  
 --- **Skin** = your vanilla minecraft skin  
 --- **Cape** = your cape, or Steve if you dont have a cape  
 --- **Elytra** = your elytra texture (NOT the cape-provided elytra!) (vanilla probably dont even use it at all)  
 --- **Resource** = any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!)  
----@param type string
+---@param type texture
 function CustomModelPart.setTexture(type) end
