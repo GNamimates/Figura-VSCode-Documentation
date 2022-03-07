@@ -55,4 +55,7 @@ function AnimationTrack.getLoopMode() end
 ---@param len number
 function AnimationTrack.setLength(len) end
 
+---Returns if the animation is playing.  
+---note that this will return false if the animation loop mode is set to `ONCE` and the track stops at the end.
+---@return boolean
 function AnimationTrack.isPlaying() end
