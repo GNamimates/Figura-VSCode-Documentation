@@ -123,3 +123,12 @@ function meta.getScriptStatus() end
 --- 4 - green  
 ---@return integer
 function meta.getTextureStatus() end
+
+--- Returns the texture status in numbers between 1 to 4 indicating its current state.  
+--- hover the avatar indicators at the model preview screen for more info  
+---
+--- 1 - white  
+--- 2 - red  
+--- 3 - yellow  
+--- 4 - green  
+function meta.getBackendStatus() end

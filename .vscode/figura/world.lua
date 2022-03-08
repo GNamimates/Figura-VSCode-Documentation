@@ -1568,6 +1568,14 @@ function World.getTimeOfDay() end
 ---@return boolean
 function World.isLightning() end
 
+---Returns true if the pos has sky access.
+function World.isOpenSky() end
+
+---Returns a float of the biome temperature
+function World.getBiomeTemperature() end
+
+---Returns `"NONE"`, `"RAIN"` or `"SNOW"`, depending on the biome weather type.
+function World.getBiomePrecipitation() end
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--

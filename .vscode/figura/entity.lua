@@ -310,6 +310,17 @@ function Entity.getAnimation() end
 ---@returns VectorPos
 function Entity.getVelocity() end
 
+---Returns True if the entity is touching water.
+function Entity.isTouchingWater() end
+
+---Returns true if the entity is fully submerged in water.
+function Entity.isUnderwater() end
+
+---Returns true if the entity is touching lava.
+function Entity.isInLava() end
+
+---Returns true if the entity has contact with rain, false for snow.
+function Entity.isInRain() end
 
 ---LivingEntity ⇐ Entity
 ---***

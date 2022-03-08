@@ -27,6 +27,14 @@
 ---| '"EndPortal"' #Use the end portal shader.
 ---| '"Glint"' #Use the enchantment glint.
 
+---@alias TextureType
+---|'"None"' #nothing, uses an item instead
+---|'"Custom"' #uses your custom/model texture
+---|'"Skin"' #uses the player vanilla skin
+---|'"Cape"' #uses the player cape
+---|'"Elytra"' #uses the player elytra
+---|'"Resource"' #uses an ingame/resource pack texture
+
 ---A basic model part with very few options for modifying it.
 ---@class BasicModelPart
 local BasicModelPart = {}
@@ -200,6 +208,24 @@ function CustomModelPart.getName() end
 ---@param dir VectorPos
 ---@return VectorPos
 function CustomModelPart.partToWorldDir(dir) end
+
+---Sets the texture size of the model.
+---@param vector Vector2
+function CustomModelPart.setTextureSize(vector) end
+
+---Gets the texture size of the model.
+---@param vector Vector2
+function CustomModelPart.getTextureSize(vector) end
+
+---a face string, and a vector of 4 values, blockbench uv format
+---@param FaceString string
+---@param vector VectorUV
+function CustomModelPart.rebuildUV(FaceString,vector) end
+
+---a face string, and a vector of 4 values, blockbench uv format
+---@param FaceString string
+---@return VectorUV
+function CustomModelPart.getRebuiltUV(FaceString) end
 
 ---*Just a word of caution, this function is very complicated. Do not expect to get how it works
 ---right from the start.*
@@ -402,7 +428,7 @@ function BasicModelPart.setScale(scale) end
 --- **Cape** = your cape, or Steve if you dont have a cape  
 --- **Elytra** = your elytra texture (NOT the cape-provided elytra!) (vanilla probably dont even use it at all)  
 --- **Resource** = any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!)  
----@param type string
+---@param type TextureType
 function CustomModelPart.setTexture(type) end
 
 ---Sets the render layer
