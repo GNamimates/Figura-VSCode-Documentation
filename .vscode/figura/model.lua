@@ -445,6 +445,3 @@ function CustomModelPart.setTexture(type) end
 ---Sets the render layer
 ---@param name string
 function BasicModelPart.setRenderLayer(name) end
-
----@param type texture
-function CustomModelPart.setTexture(type) end
