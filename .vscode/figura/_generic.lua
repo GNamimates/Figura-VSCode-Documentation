@@ -88,6 +88,41 @@ function tick() end
 ---@param delta number
 function render(delta) end
 
+---`delta`:  
+---&emsp; The distance between the last tick and next tick this frame sits on.  
+---&emsp; This is a value `0..1`.
+---***
+---**THIS FUNCTION DOES NOT EXIST UNTIL YOU CREATE IT!**  
+---You should not run this function, Figura will run it for you.
+---
+---Use the below code to create this function:
+---```
+---function render(delta)
+---  --code here
+---end
+---```
+---***
+---This function runs its contents every frame that this script's avatar is visible.  
+---This will only run on the player if they are in third person or can see any part of their
+---avatar that is connected to them (Not `NO_PARENT`) in first person.
+---
+---It is very ineffecient to run code here. Only run code that should change every frame.  
+---A few simple examples of code that could be placed here are:
+---* Moving/rotating/scaling parts smoothly,
+---* Getting the positions of parts.
+---
+---You should not get Minecraft data every frame as it only changes every tick.
+---
+---
+---Notes:
+---* This function *can* be defined multiple times. This is unlike vanilla Lua where redefining
+---a function will overwrite it.
+---* Figura will run the contents of every instance of this function.
+---* Try to define this function as few times as possible, this feature only exists to make combining
+---different scripts easier.
+---@param delta number
+function world_render(delta) end
+
 ---**THIS FUNCTION DOES NOT EXIST UNTIL YOU CREATE IT!**  
 ---You should not run this function, Figura will run it for you.
 ---
@@ -132,7 +167,6 @@ function player_init() end
 ---different scripts easier.
 ---@param cmd string
 function onCommand(cmd) end
-
 
 ---Share variables between scripts.
 ---@param key string
