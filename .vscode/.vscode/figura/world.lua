@@ -1568,14 +1568,6 @@ function World.getTimeOfDay() end
 ---@return boolean
 function World.isLightning() end
 
----Returns true if the pos has sky access.
-function World.isOpenSky() end
-
----Returns a float of the biome temperature
-function World.getBiomeTemperature() end
-
----Returns `"NONE"`, `"RAIN"` or `"SNOW"`, depending on the biome weather type.
-function World.getBiomePrecipitation() end
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--
@@ -1641,30 +1633,3 @@ function BlockState.getHardness() end
 
 ---Returns the amount of restone power a comparitor would output.
 function BlockState.getComparatorOutput() end
-
----Returns true if the block has collision.
-function BlockState.isCollidable() end
-
-function BlockState.getMaterial() end
-
----Returns a table, listing each sound a blockstate may make, also includes base pitch and volume.
-function BlockState.toStateString() end
-
----Returns a table, listing each sound a blockstate may make, also includes base pitch and volume.
-function BlockState.getSoundGroup() end
-
----Returns a table of vectors, each vector corrisponding to a "box" of the visual hitbox (format: minX, minY, minZ, maxX, maxY, maxZ).
-function BlockState.getOutlineShape() end
-
----Returns a table of vectors, each vector corrisponding to a "box" of the block's collision (format: minX, minY, minZ, maxX, maxY, maxZ).
-function BlockState.getCollisionShape() end
-
-function BlockState.getBlastResistance() end
-
-function BlockState.getSlipperiness() end
-
-function BlockState.getVelocityMultiplier() end
-
----Returns true if the block can be an item.
----@return boolean
-function BlockState.isBlockItem() end

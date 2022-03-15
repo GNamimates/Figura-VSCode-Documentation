@@ -35,9 +35,6 @@ function renderer.isCameraBackwards() end
 ---@return VectorPos
 function renderer.getCameraPos() end
 
----Returns true if the camera is facing the front or back of the player
-function renderer.isCameraBackwards() end
-
 ---Renders a block for a frame.  
 ---***
 ---**BlockState**  blockstate string, just like how you do in vanilla commands like /setblock (no liquids included).

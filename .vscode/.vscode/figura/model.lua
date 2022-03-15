@@ -27,7 +27,6 @@
 ---| '"EndPortal"' #Use the end portal shader.
 ---| '"Glint"' #Use the enchantment glint.
 
-
 ---A basic model part with very few options for modifying it.
 ---@class BasicModelPart
 local BasicModelPart = {}
@@ -202,24 +201,6 @@ function CustomModelPart.getName() end
 ---@return VectorPos
 function CustomModelPart.partToWorldDir(dir) end
 
----Sets the texture size of the model.
----@param vector Vector2
-function CustomModelPart.setTextureSize(vector) end
-
----Gets the texture size of the model.
----@param vector Vector2
-function CustomModelPart.getTextureSize(vector) end
-
----a face string, and a vector of 4 values, blockbench uv format
----@param FaceString string
----@param vector VectorUV
-function CustomModelPart.setUVData(FaceString,vector) end
-
----a face string, and a vector of 4 values, blockbench uv format
----@param FaceString string
----@return VectorUV
-function CustomModelPart.getUVData(FaceString) end
-
 ---*Just a word of caution, this function is very complicated. Do not expect to get how it works
 ---right from the start.*
 ---
@@ -295,6 +276,32 @@ function CustomModelPart.worldToPartDir(dir) end
 ---@param pos VectorPos
 ---@return VectorPos
 function CustomModelPart.worldToPartPos(pos) end
+
+---@alias renderType
+---|"BLOCK"
+---|"ITEM"
+---|"TEXT"
+
+---@alias renderMode
+---|"THIRD_PERSON_LEFT_HAND"
+---|"THIRD_PERSON_RIGHT_HAND"
+---|"FIRST_PERSON_LEFT_HAND"
+---|"FIRST_PERSON_RIGHT_HAND"
+---|"HEAD"
+---|"GUI"
+---|"GROUND"
+---|"FIXED"
+
+---renders an item, block or text
+---***
+---examples:  
+---`model.part.addRenderTask("ITEM", "My Item", "iron_axe", "THIRD_PERSON_LEFT_HAND")`  
+---`model.part.addRenderTask("BLOCK", "Awesome block", "minecraft:light_gray_stained_glass_pane", "FIXED")`  
+---`model.part.addRenderTask("TEXT", "quote", "I am amazing")`  
+---@param type renderType
+---@param taskName string
+---@param modes renderMode
+function CustomModelPart.addRenderTask(type,taskName,modes) end
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--
@@ -414,19 +421,21 @@ function VanillaModelPart.setScale(scale) end
 ---@param scale VectorPos
 function BasicModelPart.setScale(scale) end
 
----@alias TextureType
----| '"Custom"' #your custom texture, if any (default)  
----| '"Skin"' #your vanilla minecraft skin  
----| '"Cape"' #your cape, or Steve if you dont have a cape  
----| '"Elytra"' #your elytra texture (NOT the cape-provided elytra!) (vanilla probably dont even use it at all)  
----| '"Resource"' #any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!) 
+---@class texture
+---@alias texture
+---| '"Custom"'
+---| '"Skin"'
+---| '"Cape"'
+---| '"Elytra"'
+---| '"Resource"'
 texture = {}
 
 
----Sets the texture type of the group and its children.
----@param type TextureType
+--- Textures:  
+--- **Custom** = your custom texture, if any (default)  
+--- **Skin** = your vanilla minecraft skin  
+--- **Cape** = your cape, or Steve if you dont have a cape  
+--- **Elytra** = your elytra texture (NOT the cape-provided elytra!) (vanilla probably dont even use it at all)  
+--- **Resource** = any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!)  
+---@param type texture
 function CustomModelPart.setTexture(type) end
-
----Sets the render layer
----@param name string
-function BasicModelPart.setRenderLayer(name) end

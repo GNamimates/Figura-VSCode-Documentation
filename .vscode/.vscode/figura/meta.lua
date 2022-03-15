@@ -94,9 +94,6 @@ function meta.getSoundLimit() end
 ---@return number
 function meta.getTickLimit() end
 
----Returns a true if the player can use custom render layers (shaders)
-function meta.getCanHaveCustomRenderLayer() end
-
 --- Returns the model status in numbers between 1 to 4 indicating its current state.  
 --- hover the avatar indicators at the model preview screen for more info  
 ---
@@ -126,12 +123,3 @@ function meta.getScriptStatus() end
 --- 4 - green  
 ---@return integer
 function meta.getTextureStatus() end
-
---- Returns the texture status in numbers between 1 to 4 indicating its current state.  
---- hover the avatar indicators at the model preview screen for more info  
----
---- 1 - white  
---- 2 - red  
---- 3 - yellow  
---- 4 - green  
-function meta.getBackendStatus() end

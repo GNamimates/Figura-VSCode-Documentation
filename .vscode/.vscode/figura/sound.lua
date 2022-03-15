@@ -60,11 +60,3 @@ function sound.playSound(name, pos_vol) end
 ---@param pos VectorPos
 ---@param vol number[]
 function sound.playCustomSound(name, pos, vol) end
-
----Adds a new custom sound to your model, using data from either a table of bytes, OR a base64-encoded string.
----@param name string
----@param data any
-function sound.registerCustomSound(name,data) end
-
----comment
-function sound.isCustomSoundRegistered() end
