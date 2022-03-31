@@ -20,8 +20,3 @@ function chat.sendMessage(str) end
 ---Create a function `onCommand(cmd)` to catch commands typed by you into chat.
 ---@param str string
 function chat.setFiguraCommandPrefix(str) end
-
----note that this returns the input text of every client's inputted text.  
----"intentional" as of 0.0.8
----@return string
-function chat.getInputText() end

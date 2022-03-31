@@ -27,7 +27,6 @@
 ---| '"EndPortal"' #Use the end portal shader.
 ---| '"Glint"' #Use the enchantment glint.
 
-
 ---A basic model part with very few options for modifying it.
 ---@class BasicModelPart
 local BasicModelPart = {}
@@ -184,41 +183,11 @@ function CustomModelPart.getShader() end
 ---@return VectorUV
 function CustomModelPart.getUV() end
 
----Returns true culling is enabled on the custom part.
----@return boolean
-function CustomModelPart.getCullEnabled(bool) end
-
----Returns a string, either "CUBE", "GROUP" or "MESH", of the part type.
----@return string
-function CustomModelPart.getType() end
-
----returns a string, of the part name (the name as in blockbench for this cube/bone)
----@return string
-function CustomModelPart.getName() end
-
 ---Takes a `Vector` with a direction relative to the part and returns a `Vector` with the direction
 ---in world-space.
 ---@param dir VectorPos
 ---@return VectorPos
 function CustomModelPart.partToWorldDir(dir) end
-
----Sets the texture size of the model.
----@param vector Vector2
-function CustomModelPart.setTextureSize(vector) end
-
----Gets the texture size of the model.
----@param vector Vector2
-function CustomModelPart.getTextureSize(vector) end
-
----a face string, and a vector of 4 values, blockbench uv format
----@param FaceString string
----@param vector VectorUV
-function CustomModelPart.setUVData(FaceString,vector) end
-
----a face string, and a vector of 4 values, blockbench uv format
----@param FaceString string
----@return VectorUV
-function CustomModelPart.getUVData(FaceString) end
 
 ---*Just a word of caution, this function is very complicated. Do not expect to get how it works
 ---right from the start.*
@@ -278,10 +247,6 @@ function CustomModelPart.setShader(shader) end
 ---@param uv VectorUV
 function CustomModelPart.setUV(uv) end
 
----Toggles culling on the custom part.
----@param bool boolean
-function CustomModelPart.setCullEnabled(bool) end
-
 ---Takes a `Vector` with a direction in world-space and
 ---returns a `Vector` with the direction relative to the part.
 ---
@@ -295,6 +260,7 @@ function CustomModelPart.worldToPartDir(dir) end
 ---@param pos VectorPos
 ---@return VectorPos
 function CustomModelPart.worldToPartPos(pos) end
+
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--
@@ -405,28 +371,3 @@ parrot_model = {
   ---@type BasicModelPart
   RIGHT_PARROT = {}
 }
-
----Scales the part.
----@param scale VectorPos
-function VanillaModelPart.setScale(scale) end
-
----Scales the part.
----@param scale VectorPos
-function BasicModelPart.setScale(scale) end
-
----@alias TextureType
----| '"Custom"' #your custom texture, if any (default)  
----| '"Skin"' #your vanilla minecraft skin  
----| '"Cape"' #your cape, or Steve if you dont have a cape  
----| '"Elytra"' #your elytra texture (NOT the cape-provided elytra!) (vanilla probably dont even use it at all)  
----| '"Resource"' #any loaded vanilla texture! or missing texture if nor found (supports resource packs) (does NOT supports .mcmeta!) 
-texture = {}
-
-
----Sets the texture type of the group and its children.
----@param type TextureType
-function CustomModelPart.setTexture(type) end
-
----Sets the render layer
----@param name string
-function BasicModelPart.setRenderLayer(name) end

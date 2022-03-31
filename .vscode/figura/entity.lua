@@ -310,17 +310,6 @@ function Entity.getAnimation() end
 ---@returns VectorPos
 function Entity.getVelocity() end
 
----Returns True if the entity is touching water.
-function Entity.isTouchingWater() end
-
----Returns true if the entity is fully submerged in water.
-function Entity.isUnderwater() end
-
----Returns true if the entity is touching lava.
-function Entity.isInLava() end
-
----Returns true if the entity has contact with rain, false for snow.
-function Entity.isInRain() end
 
 ---LivingEntity ⇐ Entity
 ---***
@@ -381,20 +370,6 @@ function LivingEntity.getStatusEffect(effect) end
 ---@return StatusEffectID[]
 function LivingEntity.getStatusEffectTypes() end
 
----Returns true if the entity is using an item.
----@return boolean
-function LivingEntity.isUsingItem() end
-
---- get the player active hand.  
---- outputs are: `nil`, `"MAIN_HAND"`, `"OFF_HAND"`  
---- only updates after using an item,  
---- if no item was ever used, it returns nil.  
----@return string | nil
-function LivingEntity.getActiveHand() end
-
----Returns an item stack table of the active item.
----@return table
-function LivingEntity.getActiveItem() end
 
 ---Player ⇐ LivingEntity ⇐ Entity
 ---***
@@ -428,9 +403,6 @@ function Player.lastDamageSource() end
 ---@return number
 function Player.getExperienceLevel() end
 
----Gets the stored value from the player.
----@param key string
-function player.getStoredValue(key) end
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--

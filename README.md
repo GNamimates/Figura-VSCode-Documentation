@@ -1,4 +1,4 @@
-### Note:nvm im back
+## Note: the docs isnt being mentained anymore, so I will for you \\(o-o)/
 * check out the `main` branch for `0.0.7`
 * and check the `0.0.8` branch for `0.0.8` features
 ***

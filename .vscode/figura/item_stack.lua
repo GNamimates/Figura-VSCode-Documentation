@@ -1162,9 +1162,7 @@ function ItemStack.setCount(x) end
 ---@return number
 function ItemStack.getDamage() end
 
----Returns true if the item is food.
----@return boolean
-function ItemStack.isFood() end
+
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--
 --================================================================================================--
