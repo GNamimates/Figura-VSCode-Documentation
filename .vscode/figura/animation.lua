@@ -59,3 +59,11 @@ function AnimationTrack.setLength(len) end
 ---note that this will return false if the animation loop mode is set to `ONCE` and the track stops at the end.
 ---@return boolean
 function AnimationTrack.isPlaying() end
+
+---Sets the priority of the animation.  
+---higher priority overwrites lower ones
+---@param priority integer
+function AnimationTrack.setPriority(priority) end
+
+---Returns the prioirty of the animation track.
+function AnimationTrack.getPriority() end

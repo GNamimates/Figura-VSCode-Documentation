@@ -277,6 +277,31 @@ function CustomModelPart.worldToPartDir(dir) end
 ---@return VectorPos
 function CustomModelPart.worldToPartPos(pos) end
 
+---@alias renderType
+---|"BLOCK"
+---|"ITEM"
+---|"TEXT"
+
+---@alias renderMode
+---|"THIRD_PERSON_LEFT_HAND"
+---|"THIRD_PERSON_RIGHT_HAND"
+---|"FIRST_PERSON_LEFT_HAND"
+---|"FIRST_PERSON_RIGHT_HAND"
+---|"HEAD"
+---|"GUI"
+---|"GROUND"
+---|"FIXED"
+
+---renders an item, block or text
+---***
+---examples:  
+---`model.part.addRenderTask("ITEM", "My Item", "iron_axe", "THIRD_PERSON_LEFT_HAND")`  
+---`model.part.addRenderTask("BLOCK", "Awesome block", "minecraft:light_gray_stained_glass_pane", "FIXED")`  
+---`model.part.addRenderTask("TEXT", "quote", "I am amazing")`  
+---@param type renderType
+---@param taskName string
+---@param modes renderMode
+function CustomModelPart.addRenderTask(type,taskName,modes) end
 
 --================================================================================================--
 --=====  FUNCTIONS  ==============================================================================--
