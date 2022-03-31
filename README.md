@@ -1,4 +1,4 @@
-### Note:things went down hill for me, this docs is now depricated. 
+### Note:nvm im back
 * check out the `main` branch for `0.0.7`
 * and check the `0.0.8` branch for `0.0.8` features
 ***
