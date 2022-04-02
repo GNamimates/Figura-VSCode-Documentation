@@ -1,6 +1,4 @@
-## Note: The original Docs isnt being mentained anymore, so I will for you \\(o-o)/
-* check out the `main` branch for `0.0.7`
-* and check the `0.0.8` branch for `0.0.8` features
+## Note: This Docs is horribly made, use [use KitCat's fork instead](https://github.com/KitCat962/Figura-VSCode-Documentation/)
 ***
 ### Contents
 [What's New?](#whats-new)  
